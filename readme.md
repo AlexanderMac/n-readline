@@ -7,8 +7,7 @@
 ## Features
 - Read text files line by line.
 - Support for pause/resume operations.
-- Possibility to skip and limit strings for reading.
-- An array buffer to store read strings.
+- Skip and limit strings.
 
 ## Commands
 ```sh
