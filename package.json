@@ -1,0 +1,35 @@
+{
+  "name": "n-readline",
+  "version": "0.0.1",
+  "description": "Node file reader for reading text files line by line. Supports pause/resume, an array buffer for loaded strings",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "lint": "eslint --ext .js src/ test/",
+    "test": "NODE_ENV=test mocha",
+    "coverage": "nyc npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexanderMac/n-readline.git"
+  },
+  "keywords": [
+    "readline",
+    "file"
+  ],
+  "author": "Alexander Mac",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AlexanderMac/n-readline/issues"
+  },
+  "homepage": "https://github.com/AlexanderMac/n-readline#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.3.1",
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0",
+    "should": "^13.2.3"
+  }
+}
