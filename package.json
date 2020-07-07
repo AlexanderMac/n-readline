@@ -1,6 +1,6 @@
 {
   "name": "n-readline",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Node file reader for reading text files line by line. Supports pause/resume, skip and limit strings",
   "main": "index.js",
   "types": "index.d.ts",
