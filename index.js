@@ -11,7 +11,9 @@ class NReadline extends events.EventEmitter {
     this._skipEmptyLines = !!skipEmptyLines;
 
     this._from = start || 0;
-    this._to = this._from + limit;
+    if (limit) {
+      this._to = this._from + limit;
+    }
     this._lines = [];
     this._lineFragment = '';
     this._lineNumber = 0;
@@ -107,7 +109,11 @@ class NReadline extends events.EventEmitter {
       return;
     }
     if (this._lines.length === 0) {
-      this._readStream.resume();
+      if (this._isStopping) {
+        this._stop();
+      } else {
+        this._readStream.resume();
+      }
     } else {
       this._lines.shift();
       this._lineNumber++;

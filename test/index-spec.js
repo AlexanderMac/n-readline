@@ -128,4 +128,24 @@ describe('functional tests', () => {
       done();
     });
   });
+
+  it('should correctly stops reader when start is greater than lineCount', done => {
+    let rl = _getInstance({ start: 3000 });
+    let expectedLines = [];
+    let expectedNumbers = [];
+    let lines = [];
+    let lineNumbers = [];
+
+    rl.start();
+    rl.on('error', done);
+    rl.on('line', (line, lineNumber) => {
+      lines.push(line);
+      lineNumbers.push(lineNumber);
+    });
+    rl.on('end', () => {
+      should(lines).eql(expectedLines);
+      should(lineNumbers).eql(expectedNumbers);
+      done();
+    });
+  });
 });
