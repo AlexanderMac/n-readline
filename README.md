@@ -4,17 +4,17 @@
 [![Code Coverage](https://codecov.io/gh/AlexanderMac/n-readline/branch/master/graph/badge.svg)](https://codecov.io/gh/AlexanderMac/n-readline)
 [![npm version](https://badge.fury.io/js/n-readline.svg)](https://badge.fury.io/js/n-readline)
 
-## Features
+### Features
 - Read text files line by line.
 - Support for pause/resume operations.
 - Skip and limit strings.
 
-## Commands
-```sh
+### Install
+```bash
 npm i n-readline
 ```
 
-## Usage
+### Usage
 ```js
 const NReadline = require('n-readline')
 
@@ -41,9 +41,9 @@ rl.on('line', (line, lineNumber) => {
 rl.on('end', () => console.log('Done'))
 ```
 
-## API
+### API
 
-### constructor(params)
+##### constructor(params)
 Creates instance of `NReadline`.
 
 - `filepath`: the path to the source file.
@@ -52,27 +52,27 @@ Creates instance of `NReadline`.
 - `limit`: the count of strings to read.
 - `skipEmptyLines`: if true, skips empty lines, otherwise not, `false` by default.
 
-### start(): void
+##### start(): void
 Starts reader.
 
-### pause: void
+##### pause: void
 Pauses reader.
 
-### resume: void
+##### resume: void
 Resumes reader.
 
-### stop: void
+##### stop: void
 Stops reader.
 
-### on(event: string; handler: () => {})
+##### on(event: string; handler: () => {})
 Event handler.
 
 - `error`: emitted in the case of any error, parameter `err`.
 - `line`: emitted when a next string is read, parameters `line` and `lineNumber`.
 - `end`: emitted when the whole file is read or `stop` was called.
 
-## Author
-Alexander Mac
-
-## Licence
+### Licence
 Licensed under the MIT license.
+
+### Author
+Alexander Mac
